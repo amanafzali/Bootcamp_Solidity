@@ -1,26 +1,7 @@
-# Unit 20 - "Looks like we've made our First Contract!"
+# Solidity
 
-![contract](Images/smart-contract.png)
+![Solidity LOGO](https://github.com/amanafzali/Bootcamp_Solidity/blob/master/AssociateProfit_S_Screenshots/solidity.png?raw=true)
 
-## Background
-
-Your new startup has created its own Ethereum-compatible blockchain to help connect financial institutions, and the team wants to build smart contracts to automate some company finances to make everyone's lives easier, increase transparency, and to make accounting and auditing practically automatic!
-
-Fortunately, you've been learning how to program smart contracts with Solidity! What you will be doing this assignment is creating 3 `ProfitSplitter` contracts. These contracts will do several things:
-
-* Pay your Associate-level employees quickly and easily.
-
-* Distribute profits to different tiers of employees.
-
-* Distribute company shares for employees in a "deferred equity incentive plan" automatically.
-
-## Files
-
-* [`AssociateProfitSplitter.sol`](Starter-Code/AssociateProfitSplitter.sol) -- Level 1 starter code.
-
-* [`TieredProfitSplitter.sol`](Starter-Code/TieredProfitSplitter.sol) -- Level 2 starter code.
-
-* [`DeferredEquityPlan.sol`](Starter-Code/DeferredEquityPlan.sol) -- Level 3 starter code.
 
 ## Instructions
 
@@ -86,7 +67,7 @@ You will need to fill in the constructor parameters with your designated `employ
 
 Test the `deposit` function by sending various values. Keep an eye on the `employee` balances as you send different amounts of Ether to the contract and ensure the logic is executing properly.
 
-![Remix Testing](Images/remix-test.png)
+![testing Remix](https://github.com/amanafzali/Bootcamp_Solidity/blob/master/AssociateProfit_S_Screenshots/Ganache.PNG?raw=true)
 
 ### Level Two: The `TieredProfitSplitter` Contract
 
@@ -125,6 +106,10 @@ Using the starter code, within the `deposit` function, perform the following:
   * The provided `balance` function can be used as a test to see if the logic you have in the `deposit` function is valid. Since all of the Ether should be transferred to employees, this function should always return `0`, since the contract should never store Ether itself.
 
   * Note: The 100 wei threshold is due to the way we calculate the points. If we send less than 100 wei, for example, 80 wei, `points` would equal `0` because `80 / 100` equals `0` because the remainder is discarded. We will learn more advanced arbitrary precision division later in the course. In this case, we can disregard the threshold as 100 wei is a significantly smaller value than the Ether or Gwei units that are far more commonly used in the real world (most people aren't sending less than a penny's worth of Ether).
+
+  ![testing Remix](https://github.com/amanafzali/Bootcamp_Solidity/blob/master/TieredProfit_S_Screenshots/Ganache.PNG?raw=true)
+
+
 
 ### Level Three: The `DeferredEquityPlan` Contract
 
@@ -182,6 +167,8 @@ Using the starter code, perform the following:
     }
     ```
 
+
+
   * Once you are satisfied with your contract's logic, revert the `fakenow` testing logic.
 
 * Congratulate yourself for building such complex smart contracts in your first week of Solidity! You are learning specialized skills that are highly desired in the blockchain industry!
@@ -192,7 +179,8 @@ Once you feel comfortable with your contracts, point MetaMask to the Kovan or Ro
 
 After switching MetaMask to Kovan, deploy the contracts as before and copy/keep a note of their deployed addresses. The transactions will also be in your MetaMask history, and on the blockchain permanently to explore later.
 
-![Remix Deploy](Images/remix-deploy.png)
+![testing Remix](https://github.com/amanafzali/Bootcamp_Solidity/blob/master/Koven_testnet_Screenshots/Koeven_etherscan_1.PNG?raw=true)
+
 
 ## Resources
 
@@ -208,10 +196,3 @@ For a more extensive list of awesome Solidity resources, checkout [Awesome Solid
 Another tutorial is available at [EthereumDev.io](https://ethereumdev.io/)
 
 If you enjoy building games, here's an excellent tutorial called [CryptoZombies](https://cryptozombies.io/)
-
-## Submission
-
-Create a `README.md` that explains how each of the contracts work and what the motivation for each of the contracts is. Also, please provide screenshots to illustrate the functionality (e.g. how you send transactions, how the transferred amount is then distributed by each of the contracts, and how the timelock functionality can be tested with the `fastforward` function). Alternatively, you can also record your interactions with the contract as a gif (e.g. https://www.screentogif.com/)
-
-
-Upload the `README.md` to a Github repository and provide the testnet address for others to interact with the contract.
